@@ -1,12 +1,17 @@
 import './App.css';
 import React from 'react';
-import Landing from "./pages/Landing.js";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./pages/Landing/index";
+import Navbar from './components/Navbar';
+//import Login from './pages/Login/index';
 
 const App = () => {
   return (
-    <main>
-    <Landing></Landing>
-    </main>
+    <Router>
+      <Navbar></Navbar>
+      <Landing>
+      </Landing>
+    </Router>
   );
 }
 
